@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160727033550) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "macro_tasks", id: :uuid, default: nil, force: :cascade do |t|
+  create_table "macro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.uuid     "created_by"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160727033550) do
     t.index ["macro_task_id"], name: "index_micro_tasks_on_macro_task_id", using: :btree
   end
 
-  create_table "projects", id: :uuid, default: nil, force: :cascade do |t|
+  create_table "projects", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.date     "begin_at",                null: false
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20160727033550) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "workers", id: :uuid, default: nil, force: :cascade do |t|
+  create_table "workers", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "name",       default: "", null: false
     t.string   "email",      default: "", null: false
     t.string   "password",   default: "", null: false
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20160727033550) do
     t.integer  "status",     default: 0,  null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.index ["email"], name: "index_workers_on_email", unique: true, using: :btree
   end
 
   add_foreign_key "macro_tasks", "projects"

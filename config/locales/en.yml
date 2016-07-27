@@ -3,7 +3,7 @@ en:
     status:
       inactive: Inactive
       active: Active
-    levels:
+    level:
       very_easy: Very Easy
       easy: Easy
       medium: Medium

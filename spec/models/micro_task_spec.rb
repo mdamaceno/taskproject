@@ -19,7 +19,7 @@ RSpec.describe MicroTask, type: :model do
     levels = %w(very_easy easy medium hard very_hard)
     levels.each_with_index do |l, i|
       micro_task.level = i + 1
-      expect(micro_task.level_humanize).to eq(I18n.t("enumerations.levels.#{l}"))
+      expect(micro_task.level_humanize).to eq(I18n.t("enumerations.level.#{l}"))
     end
   end
 end

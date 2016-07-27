@@ -21,9 +21,11 @@ RSpec.describe Worker, type: :model do
   end
 
   it 'returns enumerations values for status' do
-    worker = build(:worker, status: 0)
-    expect(worker.status_humanize).to eq(I18n.t('enumerations.status.inactive'))
-    worker = build(:worker, status: 1)
-    expect(worker.status_humanize).to eq(I18n.t('enumerations.status.active'))
+    worker = Worker.new
+    statuses = %w(inactive active)
+    statuses.each_with_index do |s, i|
+      worker.status = i
+      expect(worker.status_humanize).to eq(I18n.t("enumerations.status.#{s}"))
+    end
   end
 end
