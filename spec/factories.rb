@@ -18,5 +18,24 @@ FactoryGirl.define do
     title { Faker::Name.title }
     notes { Faker::Lorem.sentence(3) }
     association :project, factory: :project
+
+    factory :macro_task_with_project do
+      after(:create) do |project|
+        create(:project, project: macro_task.project)
+      end
+    end
+  end
+
+  factory :micro_task do
+    title { Faker::Name.title }
+    notes { Faker::Lorem.sentence(3) }
+    level 1
+    association :macro_task, factory: :macro_task
+
+    factory :micro_task_with_macro_task do
+      after(:create) do |project|
+        create(:macro_task, macro_task: micro_task.macro_task)
+      end
+    end
   end
 end

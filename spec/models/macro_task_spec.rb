@@ -6,6 +6,6 @@ RSpec.describe MacroTask, type: :model do
   end
 
   it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to belong_to(:project) }
   it { is_expected.to belong_to(:worker).with_foreign_key(:created_by) }
+  it { is_expected.to have_many(:micro_tasks).dependent(:destroy) }
 end

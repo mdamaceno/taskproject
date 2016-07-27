@@ -1,5 +1,6 @@
 class CreateMacroTasks < ActiveRecord::Migration[5.0]
   def change
+    enable_extension 'uuid-ossp'
     create_table :macro_tasks do |t|
       t.string :title, null: false, default: ''
       t.text :notes

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727020501) do
+ActiveRecord::Schema.define(version: 20160727033550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "macro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "macro_tasks", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.uuid     "created_by"
@@ -27,7 +27,17 @@ ActiveRecord::Schema.define(version: 20160727020501) do
     t.index ["project_id"], name: "index_macro_tasks_on_project_id", using: :btree
   end
 
-  create_table "projects", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "micro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.string   "title",         default: "", null: false
+    t.text     "notes"
+    t.integer  "level",         default: 1,  null: false
+    t.uuid     "macro_task_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["macro_task_id"], name: "index_micro_tasks_on_macro_task_id", using: :btree
+  end
+
+  create_table "projects", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.date     "begin_at",                null: false
@@ -36,7 +46,7 @@ ActiveRecord::Schema.define(version: 20160727020501) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "workers", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "workers", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "name",       default: "", null: false
     t.string   "email",      default: "", null: false
     t.string   "password",   default: "", null: false
@@ -48,4 +58,5 @@ ActiveRecord::Schema.define(version: 20160727020501) do
 
   add_foreign_key "macro_tasks", "projects"
   add_foreign_key "macro_tasks", "workers", column: "created_by"
+  add_foreign_key "micro_tasks", "macro_tasks"
 end
