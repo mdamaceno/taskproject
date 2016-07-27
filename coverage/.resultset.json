@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/emiolo/Dev/marco/taskproject/spec/models/macro_task_spec.rb": [
+      "/home/emiolo/Dev/marco/taskproject/spec/models/project/macro_task_spec.rb": [
         1,
         null,
         1,
@@ -321,6 +321,49 @@
         null,
         null
       ],
+      "/home/emiolo/Dev/marco/taskproject/app/models/project.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/app/models/project/macro_task.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/app/models/project/micro_task.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/app/enumerations/level.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/emiolo/Dev/marco/taskproject/config/routes.rb": [
         1,
         null,
@@ -376,23 +419,7 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/macro_task.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/spec/models/micro_task_spec.rb": [
+      "/home/emiolo/Dev/marco/taskproject/spec/models/project/micro_task_spec.rb": [
         1,
         null,
         1,
@@ -417,24 +444,6 @@
         5,
         null,
         null,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/micro_task.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/enumerations/level.rb": [
-        1,
-        1,
         null
       ],
       "/home/emiolo/Dev/marco/taskproject/spec/models/project_spec.rb": [
@@ -448,15 +457,6 @@
         2,
         2,
         2,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/project.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
         null
       ],
       "/home/emiolo/Dev/marco/taskproject/spec/models/worker_spec.rb": [
@@ -513,8 +513,20 @@
         1,
         1,
         null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/spec/models/worker_token_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/app/models/worker_token.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1469636330
+    "timestamp": 1469639390
   }
 }

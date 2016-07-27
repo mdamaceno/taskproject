@@ -14,13 +14,13 @@ FactoryGirl.define do
     status 0
   end
 
-  factory :macro_task do
+  factory :macro_task, class: Project::MacroTask do
     title { Faker::Name.title }
     notes { Faker::Lorem.sentence(3) }
     association :project, factory: :project
   end
 
-  factory :micro_task do
+  factory :micro_task, class: Project::MicroTask do
     title { Faker::Name.title }
     notes { Faker::Lorem.sentence(3) }
     level 1

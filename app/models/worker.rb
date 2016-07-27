@@ -1,6 +1,6 @@
 class Worker < ApplicationRecord
   # Associations
-  has_many :macro_tasks, dependent: :nullify, foreign_key: :created_by
+  has_many :macro_tasks, class_name: Project::MacroTask, dependent: :nullify, foreign_key: :created_by
 
   # Validations
   validates :name, :email, :password, :role, :status, presence: true

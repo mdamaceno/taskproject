@@ -1,7 +1,7 @@
 class CreateMacroTasks < ActiveRecord::Migration[5.0]
   def change
     enable_extension 'uuid-ossp'
-    create_table :macro_tasks do |t|
+    create_table :project_macro_tasks do |t|
       t.string :title, null: false, default: ''
       t.text :notes
       t.uuid :created_by
@@ -9,7 +9,7 @@ class CreateMacroTasks < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_foreign_key :macro_tasks, :workers, column: :created_by
-    add_index :macro_tasks, :created_by
+    add_foreign_key :project_macro_tasks, :workers, column: :created_by
+    add_index :project_macro_tasks, :created_by
   end
 end

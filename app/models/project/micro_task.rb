@@ -1,6 +1,6 @@
-class MicroTask < ApplicationRecord
+class Project::MicroTask < ApplicationRecord
   # Associations
-  belongs_to :macro_task
+  belongs_to :macro_task, class_name: Project::MacroTask, foreign_key: :project_macro_task_id
 
   # Validations
   validates :title, :level, presence: true

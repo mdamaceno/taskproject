@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe MacroTask, type: :model do
+RSpec.describe Project::MacroTask, type: :model do
   it "has a valid model" do
-    expect(MacroTask.new(attributes_for :macro_task)).to be_valid
+    expect(Project::MacroTask.new(attributes_for :macro_task)).to be_valid
   end
 
   it { is_expected.to validate_presence_of(:title) }
