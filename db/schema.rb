@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727012329) do
+ActiveRecord::Schema.define(version: 20160727020501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "projects", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "macro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.string   "title"
+    t.text     "notes"
+    t.uuid     "created_by"
+    t.uuid     "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_by"], name: "index_macro_tasks_on_created_by", using: :btree
+    t.index ["project_id"], name: "index_macro_tasks_on_project_id", using: :btree
+  end
+
+  create_table "projects", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.date     "begin_at",                null: false
@@ -33,6 +44,9 @@ ActiveRecord::Schema.define(version: 20160727012329) do
     t.integer  "status",     default: 0,  null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.index ["email"], name: "index_workers_on_email", using: :btree
   end
 
+  add_foreign_key "macro_tasks", "projects"
+  add_foreign_key "macro_tasks", "workers", column: "created_by"
 end
