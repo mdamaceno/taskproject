@@ -12,6 +12,7 @@ RSpec.describe Worker, type: :model do
   it { is_expected.to validate_presence_of(:password) }
   it { is_expected.to validate_length_of(:password).is_at_least(8) }
   it { is_expected.to validate_uniqueness_of(:email) }
+  it { is_expected.to have_many(:macro_tasks).dependent(:nullify).with_foreign_key(:created_by) }
 
   it 'is invalid if email format is not valid' do
     ['@kkk', 'email', 'email@', '.com'].each do |e|

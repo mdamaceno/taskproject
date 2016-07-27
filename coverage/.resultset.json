@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/project_spec.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/worker_spec.rb": [
         1,
         null,
         1,
@@ -12,6 +12,24 @@
         2,
         2,
         2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        1,
+        1,
+        4,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/rails_helper.rb": [
@@ -293,15 +311,15 @@
       "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/factories.rb": [
         1,
         1,
-        2,
-        2,
+        1,
+        1,
         1,
         1,
         null,
         null,
         1,
-        1,
-        1,
+        8,
+        4,
         1,
         1,
         1,
@@ -354,15 +372,21 @@
         null,
         null,
         1,
-        4,
-        4,
+        11,
+        11,
         null,
         null,
         null
       ],
-      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/project.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/worker.rb": [
         1,
         null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         null,
         null,
@@ -370,6 +394,11 @@
         null
       ],
       "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/enumerations/status.rb": [
         1,
         1,
         null
@@ -385,6 +414,6 @@
         null
       ]
     },
-    "timestamp": 1469588297
+    "timestamp": 1469589871
   }
 }
