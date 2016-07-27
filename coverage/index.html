@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-27T02:52:46-03:00">2016-07-27T02:52:46-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-27T02:55:27-03:00">2016-07-27T02:55:27-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.54%</span></span>
+    (<span class="covered_percent"><span class="green">98.56%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.4
+         1.42
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>26</b> files in total.
-    <b>137</b> relevant lines. 
-    <span class="green"><b>135</b> lines covered</span> and
+    <b>139</b> relevant lines. 
+    <span class="green"><b>137</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#67407fbb38ad310ff07c6f7b21fe90966a3f1e1c" class="src_link" title="app/models/worker.rb">app/models/worker.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
-        <td>7</td>
-        <td>7</td>
+        <td>14</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -253,9 +253,9 @@
       <tr>
         <td class="strong"><a href="#c487bf72f2bc9882ab90206312be88f312a60e6b" class="src_link" title="spec/models/worker_spec.rb">spec/models/worker_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>31</td>
-        <td>21</td>
-        <td>21</td>
+        <td>32</td>
+        <td>22</td>
+        <td>22</td>
         <td>0</td>
         <td>1.6</td>
       </tr>
@@ -277,7 +277,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>3.6</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
@@ -475,8 +475,8 @@
     <h3>app/models/worker.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -529,34 +529,40 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :email, uniqueness: true</code>
+          <code class="ruby">  validates :status, numericality: { only_integer: true }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates_email_format_of :email</code>
+          <code class="ruby">  validates :email, uniqueness: true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  validates_email_format_of :email</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby">  # Enumerations</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  has_enumeration_for :status, with: Status</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -2185,8 +2191,8 @@
     <h3>spec/models/worker_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>22</b> relevant lines. 
+      <span class="green"><b>22</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2275,106 +2281,112 @@
         <li class="covered" data-hits="2" data-linenumber="14">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { is_expected.to validate_uniqueness_of(:email) }</code>
+          <code class="ruby">  it { is_expected.to validate_numericality_of(:status).only_integer }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
+          <code class="ruby">  it { is_expected.to validate_uniqueness_of(:email) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
+          
           <code class="ruby">  it { is_expected.to have_many(:macro_tasks).dependent(:nullify).with_foreign_key(:created_by) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &#39;is invalid if email format is not valid&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
+          <code class="ruby">  it &#39;is invalid if email format is not valid&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
           <code class="ruby">    [&#39;@kkk&#39;, &#39;email&#39;, &#39;email@&#39;, &#39;.com&#39;].each do |e|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="19">
+        <li class="covered" data-hits="4" data-linenumber="20">
           <span class="hits">4</span>
           
           <code class="ruby">      expect(build(:worker, email: e)).to_not be_valid</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="23">
           
-          <code class="ruby">  it &#39;returns enumerations values for status&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">    worker = Worker.new</code>
+          <code class="ruby">  it &#39;returns enumerations values for status&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">    statuses = %w(inactive active)</code>
+          <code class="ruby">    worker = Worker.new</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">    statuses.each_with_index do |s, i|</code>
+          <code class="ruby">    statuses = %w(inactive active)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="27">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
-          <code class="ruby">      worker.status = i</code>
+          <code class="ruby">    statuses.each_with_index do |s, i|</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="28">
           <span class="hits">2</span>
           
-          <code class="ruby">      expect(worker.status_humanize).to eq(I18n.t(&quot;enumerations.status.#{s}&quot;))</code>
+          <code class="ruby">      worker.status = i</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(worker.status_humanize).to eq(I18n.t(&quot;enumerations.status.#{s}&quot;))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">end</code>
@@ -2794,8 +2806,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="7">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -2842,8 +2854,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="15">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="15">
+          <span class="hits">12</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -2866,8 +2878,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="19">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="19">
+          <span class="hits">12</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>

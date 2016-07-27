@@ -11,6 +11,7 @@ RSpec.describe Worker, type: :model do
   it { is_expected.to validate_presence_of(:status) }
   it { is_expected.to validate_presence_of(:password) }
   it { is_expected.to validate_length_of(:password).is_at_least(8) }
+  it { is_expected.to validate_numericality_of(:status).only_integer }
   it { is_expected.to validate_uniqueness_of(:email) }
   it { is_expected.to have_many(:macro_tasks).dependent(:nullify).with_foreign_key(:created_by) }
 
