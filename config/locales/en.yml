@@ -1,0 +1,5 @@
+en:
+  enumerations:
+    status:
+      inactive: Inactive
+      active: Active
