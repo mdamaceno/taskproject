@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/emiolo/Dev/marco/taskproject/spec/models/project/macro_task_spec.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/project/macro_task_spec.rb": [
         1,
         null,
         1,
@@ -14,7 +14,7 @@
         2,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/spec/rails_helper.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -73,14 +73,14 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/environment.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/application.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/application.rb": [
         1,
         null,
         1,
@@ -129,12 +129,12 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/boot.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/spring.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/spring.rb": [
         null,
         null,
         null,
@@ -142,7 +142,7 @@
         null,
         5
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/environments/test.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/environments/test.rb": [
         1,
         null,
         null,
@@ -186,7 +186,7 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/application_controller_renderer.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -194,25 +194,7 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/cors.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -221,60 +203,78 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/enumerate_it.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/cors.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/enumerate_it.rb": [
         1
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/filter_parameter_logging.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/filter_parameter_logging.rb": [
         null,
-        null,
-        null,
-        1
-      ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/new_framework_defaults.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null,
         1
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/initializers/wrap_parameters.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/new_framework_defaults.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -290,7 +290,7 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/spec/factories.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/factories.rb": [
         1,
         1,
         2,
@@ -308,6 +308,12 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         2,
         2,
         1,
@@ -321,23 +327,15 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/project.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/worker.rb": [
         1,
         null,
         1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/project/macro_task.rb": [
         1,
         null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -346,7 +344,32 @@
         1,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/project/micro_task.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/project.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/project/macro_task.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/project/micro_task.rb": [
         1,
         null,
         1,
@@ -359,24 +382,66 @@
         1,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/app/enumerations/level.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/enumerations/level.rb": [
         1,
         1,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/config/routes.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/models/worker/token.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/app/enumerations/status.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/config/routes.rb": [
         1,
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/spec/support/database_cleaner.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/support/factory_girl.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/support/shoulda_matchers.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/support/request_helpers.rb": [
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/support/database_cleaner.rb": [
         1,
         1,
         1,
         null,
         null,
         1,
-        26,
+        31,
         null,
         null,
         1,
@@ -384,42 +449,15 @@
         null,
         null,
         1,
-        26,
+        31,
         null,
         null,
         1,
-        26,
+        31,
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/spec/support/shoulda_matchers.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/spec/support/factory_girl.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/spec/support/request_helpers.rb": [
-        1,
-        1,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/spec/models/project/micro_task_spec.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/project/micro_task_spec.rb": [
         1,
         null,
         1,
@@ -446,7 +484,7 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/spec/models/project_spec.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/project_spec.rb": [
         1,
         null,
         1,
@@ -459,7 +497,7 @@
         2,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/spec/models/worker_spec.rb": [
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/worker/token_spec.rb": [
         1,
         null,
         1,
@@ -467,6 +505,20 @@
         1,
         null,
         null,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/home/mdamaceno/Desenvolvimento/ruby/taskproject/spec/models/worker_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        2,
         2,
         2,
         2,
@@ -492,41 +544,8 @@
         null,
         null,
         null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/worker.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/enumerations/status.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/spec/models/worker_token_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/models/worker_token.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1469639390
+    "timestamp": 1469661213
   }
 }

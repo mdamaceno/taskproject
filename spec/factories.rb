@@ -14,6 +14,12 @@ FactoryGirl.define do
     status 0
   end
 
+  factory :worker_token, class: Worker::Token do
+    code SecureRandom.base64
+    expire_at Time.now + 1.day
+    association :worker, factory: :worker
+  end
+
   factory :macro_task, class: Project::MacroTask do
     title { Faker::Name.title }
     notes { Faker::Lorem.sentence(3) }
