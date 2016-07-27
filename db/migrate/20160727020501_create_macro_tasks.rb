@@ -1,7 +1,7 @@
 class CreateMacroTasks < ActiveRecord::Migration[5.0]
   def change
     create_table :macro_tasks do |t|
-      t.string :title
+      t.string :title, null: false, default: ''
       t.text :notes
       t.uuid :created_by
       t.references :project, foreign_key: true

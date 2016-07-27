@@ -13,4 +13,10 @@ FactoryGirl.define do
     role 0
     status 0
   end
+
+  factory :macro_task do
+    title { Faker::Name.title }
+    notes { Faker::Lorem.sentence(3) }
+    association :project, factory: :project
+  end
 end

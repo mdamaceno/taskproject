@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-26T23:27:14-03:00">2016-07-26T23:27:14-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-26T23:58:17-03:00">2016-07-26T23:58:17-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.14%</span></span>
+    (<span class="covered_percent"><span class="green">99.07%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.39
+         1.17
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>25</b> files in total.
-    <b>116</b> relevant lines. 
-    <span class="green"><b>115</b> lines covered</span> and
+    <b>107</b> relevant lines. 
+    <span class="green"><b>106</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,16 +51,6 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#b5fcc651b772c8a6b705cc81f39ccd68c0f18afd" class="src_link" title="app/enumerations/status.rb">app/enumerations/status.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
         <td class="strong"><a href="#8085d77d2e433f7c81ae7f22c358c615336a306c" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
@@ -71,11 +61,21 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#67407fbb38ad310ff07c6f7b21fe90966a3f1e1c" class="src_link" title="app/models/worker.rb">app/models/worker.rb</a></td>
+        <td class="strong"><a href="#eeea7b4a14a47d9c43dbcb01563d3163314e7a73" class="src_link" title="app/models/macro_task.rb">app/models/macro_task.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>6</td>
-        <td>6</td>
+        <td>8</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#8ae94b0cedb9f47e7953dc5701e1fdc1ea26a0fa" class="src_link" title="app/models/project.rb">app/models/project.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -233,21 +233,21 @@
       <tr>
         <td class="strong"><a href="#c453870dc1a9c7d73a1076e7129122264e7a02f5" class="src_link" title="spec/factories.rb">spec/factories.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>22</td>
         <td>16</td>
-        <td>12</td>
-        <td>12</td>
+        <td>16</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#c487bf72f2bc9882ab90206312be88f312a60e6b" class="src_link" title="spec/models/worker_spec.rb">spec/models/worker_spec.rb</a></td>
+        <td class="strong"><a href="#4fdc7d3d9f65c714f6e28897210a9491edbea37c" class="src_link" title="spec/models/project_spec.rb">spec/models/project_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>19</td>
-        <td>19</td>
+        <td>11</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -267,7 +267,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -316,42 +316,6 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="b5fcc651b772c8a6b705cc81f39ccd68c0f18afd">
-  <div class="header">
-    <h3>app/enumerations/status.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Status &lt; EnumerateIt::Base</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  associate_values inactive: 0, active: 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
         <div class="source_table" id="8085d77d2e433f7c81ae7f22c358c615336a306c">
   <div class="header">
     <h3>app/models/application_record.rb</h3>
@@ -388,13 +352,13 @@
   </pre>
 </div>
       
-        <div class="source_table" id="67407fbb38ad310ff07c6f7b21fe90966a3f1e1c">
+        <div class="source_table" id="eeea7b4a14a47d9c43dbcb01563d3163314e7a73">
   <div class="header">
-    <h3>app/models/worker.rb</h3>
+    <h3>app/models/macro_task.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -405,58 +369,106 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Worker &lt; ApplicationRecord</code>
+          <code class="ruby">class MacroTask &lt; ApplicationRecord</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">  # Validations</code>
+          <code class="ruby">  # Associations</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :name, :email, :password, :role, :status, presence: true</code>
+          <code class="ruby">  belongs_to :project</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :password, length: { minimum: 8 }</code>
+          <code class="ruby">  belongs_to :worker, foreign_key: &#39;created_by&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  validates :email, uniqueness: true</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  validates_email_format_of :email</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  # Validations</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :title, presence: true</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  # Enumerations</code>
+          <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="8ae94b0cedb9f47e7953dc5701e1fdc1ea26a0fa">
+  <div class="header">
+    <h3>app/models/project.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_enumeration_for :status, with: Status</code>
+          <code class="ruby">class Project &lt; ApplicationRecord</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">  # Associations</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :macro_tasks, dependent: :destroy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  # Validations</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :title, :begin_at, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -1893,8 +1905,8 @@
     <h3>spec/factories.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1914,14 +1926,14 @@
           <code class="ruby">  factory :project do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
           
           <code class="ruby">    title { Faker::Name.title }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
           <code class="ruby">    notes { Faker::Lorem.sentence(3) }</code>
         </li>
@@ -1956,14 +1968,14 @@
           <code class="ruby">  factory :worker do</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="10">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">    name { Faker::Name.name }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">    email { Faker::Internet.email }</code>
         </li>
@@ -1995,6 +2007,42 @@
         <li class="never" data-hits="" data-linenumber="16">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :macro_task do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    title { Faker::Name.title }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    notes { Faker::Lorem.sentence(3) }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    association :project, factory: :project</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -2002,13 +2050,13 @@
   </pre>
 </div>
       
-        <div class="source_table" id="c487bf72f2bc9882ab90206312be88f312a60e6b">
+        <div class="source_table" id="4fdc7d3d9f65c714f6e28897210a9491edbea37c">
   <div class="header">
-    <h3>spec/models/worker_spec.rb</h3>
+    <h3>spec/models/project_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2031,19 +2079,19 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">RSpec.describe Worker, type: :model do</code>
+          <code class="ruby">RSpec.describe Project, type: :model do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;has a valid model&#39; do</code>
+          <code class="ruby">  it &quot;has a valid model&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(Worker.new(attributes_for(:worker))).to be_valid</code>
+          <code class="ruby">    expect(Project.new(attributes_for :project)).to be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -2061,124 +2109,22 @@
         <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { is_expected.to validate_presence_of(:name) }</code>
+          <code class="ruby">  it { is_expected.to validate_presence_of(:title) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { is_expected.to validate_presence_of(:email) }</code>
+          <code class="ruby">  it { is_expected.to validate_presence_of(:begin_at) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { is_expected.to validate_presence_of(:role) }</code>
+          <code class="ruby">  it { is_expected.to have_many(:macro_tasks).dependent(:destroy) }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  it { is_expected.to validate_presence_of(:status) }</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  it { is_expected.to validate_presence_of(:password) }</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="13">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  it { is_expected.to validate_length_of(:password).is_at_least(8) }</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  it { is_expected.to validate_uniqueness_of(:email) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &#39;is invalid if email format is not valid&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    [&#39;@kkk&#39;, &#39;email&#39;, &#39;email@&#39;, &#39;.com&#39;].each do |e|</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="18">
-          <span class="hits">4</span>
-          
-          <code class="ruby">      expect(build(:worker, email: e)).to_not be_valid</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &#39;returns enumerations values for status&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    worker = build(:worker, status: 0)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(worker.status_humanize).to eq(I18n.t(&#39;enumerations.status.inactive&#39;))</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    worker = build(:worker, status: 1)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(worker.status_humanize).to eq(I18n.t(&#39;enumerations.status.active&#39;))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -2604,14 +2550,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="8">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="4" data-linenumber="8">
+          <span class="hits">4</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="9">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
           
           <code class="ruby">      example.run</code>
         </li>
