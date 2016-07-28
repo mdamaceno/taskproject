@@ -1,5 +1,6 @@
 class CreateBreakPoints < ActiveRecord::Migration[5.0]
   def change
+    enable_extension 'uuid-ossp'
     create_table :project_micro_task_break_points do |t|
       t.references :worker, foreign_key: true
       t.references :project_micro_task, foreign_key: true

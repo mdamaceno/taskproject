@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727232121) do
+ActiveRecord::Schema.define(version: 20160728022323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,13 @@ ActiveRecord::Schema.define(version: 20160727232121) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["email"], name: "index_workers_on_email", unique: true, using: :btree
+  end
+
+  create_table "workers_project_micro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid "worker_id"
+    t.uuid "project_micro_task_id"
+    t.index ["project_micro_task_id"], name: "index_workers_project_micro_tasks_on_project_micro_task_id", using: :btree
+    t.index ["worker_id"], name: "index_workers_project_micro_tasks_on_worker_id", using: :btree
   end
 
   add_foreign_key "project_macro_tasks", "projects"
