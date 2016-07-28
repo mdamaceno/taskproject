@@ -5,6 +5,7 @@ RSpec.describe Project::MicroTask, type: :model do
     expect(Project::MicroTask.new(attributes_for(:micro_task))).to be_valid
   end
 
+  # Validations
   it { is_expected.to validate_presence_of(:title) }
   it { is_expected.to validate_presence_of(:level) }
   it do
@@ -12,9 +13,13 @@ RSpec.describe Project::MicroTask, type: :model do
       .is_greater_than_or_equal_to(1)
       .is_less_than_or_equal_to(5)
   end
+
+  # Associations
   it { is_expected.to belong_to(:macro_task) }
   it { is_expected.to have_many(:break_points) }
+  it { is_expected.to have_and_belong_to_many(:workers).join_table('workers_project_micro_tasks') }
 
+  # Enumerations
   it 'returns enumerations values for level' do
     micro_task = Project::MicroTask.new
     levels = %w(very_easy easy medium hard very_hard)
