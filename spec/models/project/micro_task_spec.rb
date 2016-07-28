@@ -13,6 +13,7 @@ RSpec.describe Project::MicroTask, type: :model do
       .is_less_than_or_equal_to(5)
   end
   it { is_expected.to belong_to(:macro_task) }
+  it { is_expected.to have_many(:break_points) }
 
   it 'returns enumerations values for level' do
     micro_task = Project::MicroTask.new

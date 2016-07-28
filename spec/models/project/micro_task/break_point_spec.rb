@@ -7,4 +7,6 @@ RSpec.describe Project::MicroTask::BreakPoint, type: :model do
 
   it { is_expected.to validate_presence_of(:worker) }
   it { is_expected.to validate_presence_of(:micro_task) }
+  it { is_expected.to belong_to(:worker) }
+  it { is_expected.to belong_to(:micro_task) }
 end

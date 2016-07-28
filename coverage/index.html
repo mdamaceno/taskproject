@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-27T22:07:23-03:00">2016-07-27T22:07:23-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-27T22:43:46-03:00">2016-07-27T22:43:46-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.05%</span></span>
+    (<span class="covered_percent"><span class="green">99.06%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.84
+         1.89
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>210</b> relevant lines. 
-    <span class="green"><b>208</b> lines covered</span> and
+    <b>213</b> relevant lines. 
+    <span class="green"><b>211</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -313,21 +313,21 @@
       <tr>
         <td class="strong"><a href="#037d673005f93216a53967b3f14f225236d8f427" class="src_link" title="spec/models/project/micro_task/break_point_spec.rb">spec/models/project/micro_task/break_point_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>6</td>
-        <td>6</td>
+        <td>12</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#446fa9fa2674c0734762e68b187fa67b9404cf8c" class="src_link" title="spec/models/project/micro_task_spec.rb">spec/models/project/micro_task_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>15</td>
-        <td>15</td>
+        <td>26</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -377,7 +377,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>9.9</td>
+        <td>10.7</td>
       </tr>
       
       <tr>
@@ -701,7 +701,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :break_point, class_name: Project::MicroTask::BreakPoint, foreign_key: :project_micro_task_id</code>
+          <code class="ruby">  has_many :break_points, class_name: Project::MicroTask::BreakPoint, foreign_key: :project_micro_task_id</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -2771,8 +2771,8 @@
     <h3>spec/models/project/micro_task/break_point_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2834,7 +2834,19 @@
           <code class="ruby">  it { is_expected.to validate_presence_of(:micro_task) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { is_expected.to belong_to(:worker) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { is_expected.to belong_to(:micro_task) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
@@ -2849,8 +2861,8 @@
     <h3>spec/models/project/micro_task_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2948,61 +2960,67 @@
           <code class="ruby">  it { is_expected.to belong_to(:macro_task) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { is_expected.to have_many(:break_points) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">  it &#39;returns enumerations values for level&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">    micro_task = Project::MicroTask.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">    levels = %w(very_easy easy medium hard very_hard)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">    levels.each_with_index do |l, i|</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="21">
+        <li class="covered" data-hits="5" data-linenumber="22">
           <span class="hits">5</span>
           
           <code class="ruby">      micro_task.level = i + 1</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
+        <li class="covered" data-hits="5" data-linenumber="23">
           <span class="hits">5</span>
           
           <code class="ruby">      expect(micro_task.level_humanize).to eq(I18n.t(&quot;enumerations.level.#{l}&quot;))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -3806,8 +3824,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="7">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="37" data-linenumber="7">
+          <span class="hits">37</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -3854,8 +3872,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="15">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="37" data-linenumber="15">
+          <span class="hits">37</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -3878,8 +3896,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="19">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="37" data-linenumber="19">
+          <span class="hits">37</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>
