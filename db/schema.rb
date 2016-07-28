@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727164843) do
+ActiveRecord::Schema.define(version: 20160727232121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20160727164843) do
     t.datetime "updated_at",              null: false
     t.index ["created_by"], name: "index_project_macro_tasks_on_created_by", using: :btree
     t.index ["project_id"], name: "index_project_macro_tasks_on_project_id", using: :btree
+  end
+
+  create_table "project_micro_task_break_points", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid     "worker_id"
+    t.uuid     "project_micro_task_id"
+    t.integer  "opened",                default: 0, null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["project_micro_task_id"], name: "index_project_micro_task_break_points_on_project_micro_task_id", using: :btree
+    t.index ["worker_id"], name: "index_project_micro_task_break_points_on_worker_id", using: :btree
   end
 
   create_table "project_micro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
@@ -69,6 +79,8 @@ ActiveRecord::Schema.define(version: 20160727164843) do
 
   add_foreign_key "project_macro_tasks", "projects"
   add_foreign_key "project_macro_tasks", "workers", column: "created_by"
+  add_foreign_key "project_micro_task_break_points", "project_micro_tasks"
+  add_foreign_key "project_micro_task_break_points", "workers"
   add_foreign_key "project_micro_tasks", "project_macro_tasks"
   add_foreign_key "worker_tokens", "workers"
 end
