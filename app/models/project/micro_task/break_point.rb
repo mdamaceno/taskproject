@@ -5,4 +5,5 @@ class Project::MicroTask::BreakPoint < ApplicationRecord
 
   # Validations
   validates :worker, :micro_task, presence: true
+  validates :opened, presence: true, on: :update
 end
