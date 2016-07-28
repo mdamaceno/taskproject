@@ -6,7 +6,7 @@ class Project::MicroTask < ApplicationRecord
                           foreign_key: :project_micro_task_id
   has_and_belongs_to_many :workers, class_name: Worker,
                           join_table: 'workers_project_micro_tasks',
-                          foreign_key: :project_micro_task_id
+                          foreign_key: :micro_task_id
 
   # Validations
   validates :title, :level, presence: true

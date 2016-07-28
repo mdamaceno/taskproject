@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160728022323) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "project_macro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "project_macro_tasks", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.uuid     "created_by"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.index ["project_id"], name: "index_project_macro_tasks_on_project_id", using: :btree
   end
 
-  create_table "project_micro_task_break_points", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "project_micro_task_break_points", id: :uuid, default: nil, force: :cascade do |t|
     t.uuid     "worker_id"
     t.uuid     "project_micro_task_id"
     t.integer  "opened",                default: 0, null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.index ["worker_id"], name: "index_project_micro_task_break_points_on_worker_id", using: :btree
   end
 
-  create_table "project_micro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "project_micro_tasks", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "title",                 default: "", null: false
     t.text     "notes"
     t.integer  "level",                 default: 1,  null: false
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.index ["project_macro_task_id"], name: "index_project_micro_tasks_on_project_macro_task_id", using: :btree
   end
 
-  create_table "projects", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "projects", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
     t.date     "begin_at",                null: false
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "worker_tokens", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "worker_tokens", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "code",       default: "", null: false
     t.datetime "expire_at"
     t.uuid     "worker_id"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.index ["worker_id"], name: "index_worker_tokens_on_worker_id", using: :btree
   end
 
-  create_table "workers", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "workers", id: :uuid, default: nil, force: :cascade do |t|
     t.string   "name",       default: "", null: false
     t.string   "email",      default: "", null: false
     t.string   "password",   default: "", null: false
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(version: 20160728022323) do
 
   create_table "workers_project_micro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.uuid "worker_id"
-    t.uuid "project_micro_task_id"
-    t.index ["project_micro_task_id"], name: "index_workers_project_micro_tasks_on_project_micro_task_id", using: :btree
+    t.uuid "micro_task_id"
+    t.index ["micro_task_id"], name: "index_workers_project_micro_tasks_on_micro_task_id", using: :btree
     t.index ["worker_id"], name: "index_workers_project_micro_tasks_on_worker_id", using: :btree
   end
 
@@ -90,4 +90,6 @@ ActiveRecord::Schema.define(version: 20160728022323) do
   add_foreign_key "project_micro_task_break_points", "workers"
   add_foreign_key "project_micro_tasks", "project_macro_tasks"
   add_foreign_key "worker_tokens", "workers"
+  add_foreign_key "workers_project_micro_tasks", "project_micro_tasks", column: "micro_task_id"
+  add_foreign_key "workers_project_micro_tasks", "workers"
 end
