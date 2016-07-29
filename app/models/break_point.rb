@@ -1,7 +1,7 @@
-class Project::MicroTask::BreakPoint < ApplicationRecord
+class BreakPoint < ApplicationRecord
   # Associations
   belongs_to :worker
-  belongs_to :micro_task, class_name: Project::MicroTask, foreign_key: :id
+  belongs_to :micro_task
 
   # Validations
   validates :worker, :micro_task, presence: true

@@ -17,22 +17,25 @@ FactoryGirl.define do
   factory :worker_token, class: Worker::Token do
     code SecureRandom.base64
     expire_at Time.now + 1.day
+    association :worker, factory: :worker
   end
 
-  factory :macro_task, class: Project::MacroTask do
+  factory :macro_task do
     title { Faker::Name.title }
     notes { Faker::Lorem.sentence(3) }
+    association :project, factory: :project
   end
 
-  factory :micro_task, class: Project::MicroTask do
+  factory :micro_task do
     title { Faker::Name.title }
     notes { Faker::Lorem.sentence(3) }
     level 1
+    association :macro_task, factory: :macro_task
   end
 
-  factory :micro_task_break_point, class: Project::MicroTask::BreakPoint do
+  factory :break_point do
     opened 0
-    worker nil
-    micro_task nil
+    worker { create :worker }
+    micro_task { create :micro_task }
   end
 end
