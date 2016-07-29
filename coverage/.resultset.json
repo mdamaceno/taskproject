@@ -599,8 +599,30 @@
         null,
         null,
         null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/spec/requests/v1/projects_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/spec/requests/v1/workers_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1469810654
+    "timestamp": 1469811480
   }
 }
