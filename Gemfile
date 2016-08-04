@@ -11,6 +11,7 @@ gem 'slugify'
 gem 'enumerate_it'
 gem 'validates_email_format_of'
 gem 'kaminari'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -25,7 +26,6 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'faker'
   gem 'factory_girl_rails'
 end
 
