@@ -2,8 +2,8 @@ class V1::ProjectsController < V1::BaseController
   before_action :set_project, only: [:show, :update, :destroy]
 
   def index
-    projects = Project.all
-    render json: projects, status: 200
+    @projects = Project.all
+    render json: @projects, status: 200, each_serializer: V1::ProjectSerializer
   end
 
   def show
