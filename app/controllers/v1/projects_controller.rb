@@ -2,8 +2,8 @@ class V1::ProjectsController < V1::BaseController
   before_action :set_project, only: [:show, :update, :destroy]
 
   def index
-    @projects = Project.all
-    render json: @projects, status: 200, each_serializer: V1::ProjectSerializer
+    projects = Project.all
+    render json: projects, status: 200, each_serializer: V1::ProjectSerializer
   end
 
   def show
@@ -14,7 +14,7 @@ class V1::ProjectsController < V1::BaseController
     project = Project.new(project_params)
 
     if project.save
-      render json: project, status: 201
+      render json: project, status: 201, serializer: V1::ProjectSerializer
     else
       render json: project.errors, status: 422
     end
@@ -22,7 +22,7 @@ class V1::ProjectsController < V1::BaseController
 
   def update
     if @project.update(project_params)
-      render json: @project, status: 201
+      render json: @project, status: 201, serializer: V1::ProjectSerializer
     else
       render json: @project.errors, status: 422
     end

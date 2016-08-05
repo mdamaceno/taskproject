@@ -805,7 +805,7 @@
         null,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/app/controllers/v1/projects_controller.rb": [
+      "/home/emiolo/Dev/marco/taskproject/app/controllers/v1/workers_controller.rb": [
         1,
         1,
         null,
@@ -860,12 +860,7 @@
         1,
         null
       ],
-      "/home/emiolo/Dev/marco/taskproject/app/serializers/v1/project_serializer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/emiolo/Dev/marco/taskproject/app/controllers/v1/workers_controller.rb": [
+      "/home/emiolo/Dev/marco/taskproject/app/controllers/v1/projects_controller.rb": [
         1,
         1,
         null,
@@ -911,8 +906,13 @@
         6,
         null,
         null
+      ],
+      "/home/emiolo/Dev/marco/taskproject/app/serializers/v1/project_serializer.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1470414527
+    "timestamp": 1470414884
   }
 }
