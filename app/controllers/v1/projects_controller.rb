@@ -7,7 +7,7 @@ class V1::ProjectsController < V1::BaseController
   end
 
   def show
-    render json: @project, status: 200
+    render json: @project, status: 200, serializer: V1::ProjectSerializer
   end
 
   def create
