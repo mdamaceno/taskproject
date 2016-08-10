@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Project, type: :request do
   let(:json) { JSON.parse(response.body) }
-  # let(:projects) { create(:project) }
 
   describe '#index' do
     it 'retrieves a list of projects' do
