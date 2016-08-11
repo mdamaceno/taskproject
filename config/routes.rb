@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :projects
     resources :workers
     resources :macro_tasks
+    resources :micro_tasks
     resources :break_points
   end
 end
