@@ -5,7 +5,7 @@ RSpec.describe MacroTask, type: :request do
 
   describe '#index' do
     it 'retrieves a list of macro tasks' do
-      create_list(:macro_task, 10)
+      create_list(:macro_task, 10, worker: create(:worker))
       get '/v1/macro_tasks', as: :json
       expect(response.status).to eq(200)
       expect(json.length).to eq 10
@@ -14,7 +14,7 @@ RSpec.describe MacroTask, type: :request do
 
   describe '#show' do
     it 'retrieves a macro_task' do
-      macro_task = create(:macro_task)
+      macro_task = create(:macro_task, worker: create(:worker))
       get "/v1/macro_tasks/#{macro_task.id}", as: :json
       expect(response.status).to eq(200)
       expect(json['title']).to eq macro_task.title
@@ -23,7 +23,7 @@ RSpec.describe MacroTask, type: :request do
 
   describe '#create' do
     before do
-      @macro_task = build(:macro_task)
+      @macro_task = build(:macro_task, worker: create(:worker))
     end
 
     it 'returns status 201' do
@@ -52,7 +52,7 @@ RSpec.describe MacroTask, type: :request do
 
   describe '#update' do
     before do
-      @macro_task = create(:macro_task, title: 'Usual')
+      @macro_task = create(:macro_task, title: 'Usual', worker: create(:worker))
     end
 
     it 'returns status 201' do
