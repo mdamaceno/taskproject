@@ -5,5 +5,5 @@ class MacroTask < ApplicationRecord
   has_many :micro_tasks, dependent: :destroy
 
   # Validations
-  validates :title, presence: true
+  validates :title, :worker, presence: true
 end
