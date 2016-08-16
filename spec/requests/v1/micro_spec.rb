@@ -5,7 +5,7 @@ RSpec.describe MicroTask, type: :request do
 
   describe '#index' do
     it 'retrieves a list of micro tasks' do
-      create_list(:micro_task, 10)
+      create_list(:micro_task, 10, macro_task: create(:macro_task, worker: create(:worker)))
       get '/v1/micro_tasks', as: :json
       expect(response.status).to eq(200)
       expect(json.length).to eq 10
@@ -14,7 +14,7 @@ RSpec.describe MicroTask, type: :request do
 
   describe '#show' do
     it 'retrieves a micro_task' do
-      micro_task = create(:micro_task)
+      micro_task = create(:micro_task, macro_task: create(:macro_task, worker: create(:worker)))
       get "/v1/micro_tasks/#{micro_task.id}", as: :json
       expect(response.status).to eq(200)
       expect(json['title']).to eq micro_task.title
@@ -23,7 +23,7 @@ RSpec.describe MicroTask, type: :request do
 
   describe '#create' do
     before do
-      @micro_task = build(:micro_task)
+      @micro_task = build(:micro_task, macro_task: create(:macro_task, worker: create(:worker)))
     end
 
     it 'returns status 201' do
@@ -44,7 +44,7 @@ RSpec.describe MicroTask, type: :request do
 
     context 'with invalid params' do
       it 'returns status 422' do
-        micro_task = build(:micro_task, title: nil)
+        micro_task = build(:micro_task, title: nil, macro_task: create(:macro_task, worker: create(:worker)))
         post '/v1/micro_tasks', params: micro_task, as: :json
         expect(response.status).to eq(422)
       end
@@ -53,7 +53,7 @@ RSpec.describe MicroTask, type: :request do
 
   describe '#update' do
     before do
-      @micro_task = create(:micro_task, title: 'Usual')
+      @micro_task = create(:micro_task, title: 'Usual', macro_task: create(:macro_task, worker: create(:worker)))
     end
 
     it 'returns status 201' do
@@ -80,7 +80,7 @@ RSpec.describe MicroTask, type: :request do
 
   describe '#destroy' do
     before do
-      @micro_task = create(:micro_task)
+      @micro_task = create(:micro_task, macro_task: create(:macro_task, worker: create(:worker)))
     end
 
     it 'deletes a micro_task' do

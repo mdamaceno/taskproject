@@ -40,6 +40,6 @@ class V1::MacroTasksController < V1::BaseController
   end
 
   def macro_task_params
-    params.require(:macro_task).permit(:title, :notes, :created_by, :project_id)
+    params.require(:macro_task).permit(:title, :notes, :created_by, :project_id, :worker_id)
   end
 end

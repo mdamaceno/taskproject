@@ -5,7 +5,7 @@ RSpec.describe BreakPoint, type: :request do
 
   describe '#index' do
     it 'retrieves a list of break_points' do
-      create_list(:break_point, 10)
+      create_list(:break_point, 10, worker: create(:worker))
       get '/v1/break_points', as: :json
       expect(response.status).to eq(200)
       expect(json.length).to eq 10
@@ -14,7 +14,7 @@ RSpec.describe BreakPoint, type: :request do
 
   describe '#show' do
     it 'retrieves a break_point' do
-      break_point = create(:break_point)
+      break_point = create(:break_point, worker: create(:worker))
       get "/v1/break_points/#{break_point.id}", as: :json
       expect(response.status).to eq(200)
       expect(json['worker_id']).to eq break_point.worker_id
@@ -25,7 +25,7 @@ RSpec.describe BreakPoint, type: :request do
 
   describe '#create' do
     before do
-      @break_point = build(:break_point)
+      @break_point = build(:break_point, worker: create(:worker))
     end
 
     it 'returns status 201' do

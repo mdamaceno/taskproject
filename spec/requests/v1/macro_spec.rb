@@ -79,7 +79,7 @@ RSpec.describe MacroTask, type: :request do
 
   describe '#destroy' do
     before do
-      @macro_task = create(:macro_task)
+      @macro_task = create(:macro_task, worker: create(:worker))
     end
 
     it 'deletes a macro_task' do
