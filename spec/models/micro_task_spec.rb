@@ -17,7 +17,7 @@ RSpec.describe MicroTask, type: :model do
   # Associations
   it { is_expected.to belong_to(:macro_task) }
   it { is_expected.to have_many(:break_points) }
-  it { is_expected.to have_and_belong_to_many(:workers).join_table('workers_micro_tasks') }
+  it { is_expected.to have_and_belong_to_many(:workers).join_table('micro_tasks_workers') }
 
   # Enumerations
   it 'returns enumerations values for level' do

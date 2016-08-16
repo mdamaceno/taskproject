@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.index ["macro_task_id"], name: "index_micro_tasks_on_macro_task_id", using: :btree
   end
 
+  create_table "micro_tasks_workers", id: false, force: :cascade do |t|
+    t.uuid "worker_id"
+    t.uuid "micro_task_id"
+    t.index ["micro_task_id"], name: "index_micro_tasks_workers_on_micro_task_id", using: :btree
+    t.index ["worker_id"], name: "index_micro_tasks_workers_on_worker_id", using: :btree
+  end
+
   create_table "projects", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "title",      default: "", null: false
     t.text     "notes"
@@ -77,19 +84,12 @@ ActiveRecord::Schema.define(version: 20160728022323) do
     t.index ["email"], name: "index_workers_on_email", unique: true, using: :btree
   end
 
-  create_table "workers_micro_tasks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
-    t.uuid "worker_id"
-    t.uuid "micro_task_id"
-    t.index ["micro_task_id"], name: "index_workers_micro_tasks_on_micro_task_id", using: :btree
-    t.index ["worker_id"], name: "index_workers_micro_tasks_on_worker_id", using: :btree
-  end
-
   add_foreign_key "break_points", "micro_tasks"
   add_foreign_key "break_points", "workers"
   add_foreign_key "macro_tasks", "projects"
   add_foreign_key "macro_tasks", "workers", column: "created_by"
   add_foreign_key "micro_tasks", "macro_tasks"
+  add_foreign_key "micro_tasks_workers", "micro_tasks"
+  add_foreign_key "micro_tasks_workers", "workers"
   add_foreign_key "worker_tokens", "workers"
-  add_foreign_key "workers_micro_tasks", "micro_tasks"
-  add_foreign_key "workers_micro_tasks", "workers"
 end

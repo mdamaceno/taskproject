@@ -23,7 +23,7 @@ RSpec.describe Worker, type: :model do
   # Associations
   it { is_expected.to have_many(:macro_tasks).dependent(:nullify).with_foreign_key(:created_by) }
   it { is_expected.to have_many(:tokens).dependent(:destroy) }
-  it { is_expected.to have_and_belong_to_many(:micro_tasks).join_table('workers_micro_tasks') }
+  it { is_expected.to have_and_belong_to_many(:micro_tasks).join_table('micro_tasks_workers') }
 
   # Enumerations
   it 'returns enumerations values for status' do
