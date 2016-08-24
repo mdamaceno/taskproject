@@ -4,6 +4,6 @@ class BreakPoint < ApplicationRecord
   belongs_to :micro_task
 
   # Validations
-  validates :worker, :micro_task, presence: true
+  validates :worker_id, :micro_task_id, presence: true
   validates :opened, presence: true, on: :update
 end
